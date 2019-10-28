@@ -1,7 +1,8 @@
 import React from 'react';
 import Smurf from './Smurf'
-
+import SmurfForm from "./SmurfForm";
 const Smurfs = (props) => {
+
     return (
         <div>
             {props.smurfs.map(smurf => {
@@ -9,6 +10,7 @@ const Smurfs = (props) => {
                      <Smurf key = {smurf.id} smurf = {smurf}/>
                      )
             })}
+            <SmurfForm />
         </div>
     )
 }

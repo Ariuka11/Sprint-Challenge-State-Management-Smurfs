@@ -23,10 +23,10 @@
      }
  }
 
- export const addingSmurf = () => {
+ export const addingSmurf = (one) => {
      return dispatch => {
 
-        axios.post(`http://localhost:3333/smurfs`)
+        axios.post(`http://localhost:3333/smurfs`, one)
             .then(res => {
                 console.log(res)
                 dispatch({type: ADDING_SMURF_SUCCESSFUL, payload: res.data})

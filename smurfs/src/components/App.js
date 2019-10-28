@@ -4,6 +4,7 @@ import Smurfs from "./Smurfs";
 import {connect} from 'react-redux'
 import { fetchingSmurtData} from '../actions/action'
 
+
 const App = (props) =>  {
 
   useEffect(() => {
@@ -13,6 +14,7 @@ const App = (props) =>  {
     return (
       <div className="App">
         <Smurfs smurfs = {props.smurfs} />
+      
       </div>
     );
 }
