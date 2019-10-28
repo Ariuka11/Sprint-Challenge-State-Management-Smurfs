@@ -2,7 +2,9 @@ import {FETCHING_SMURF_DATA,
         FETCHING_SMURF_SUCCESSFUL,
         FETCHING_SMURF_FAILED,
         ADDING_SMURF_SUCCESSFUL,
-        ADDING_SMURF_FAILED}
+        ADDING_SMURF_FAILED,
+        DELETE_SMURF_SUCCESSFUL,
+        DELETE_SMURF_FAILED}
      from '../actions/action'    
 
 const initialState = {
@@ -35,6 +37,16 @@ export const reducer = (state = initialState, action) => {
                 smurfs: action.payload
             }
         case ADDING_SMURF_FAILED :
+            return {
+                ...state,
+                error: action.payload
+            }
+        case DELETE_SMURF_SUCCESSFUL :
+            return {
+                ...state,
+                smurfs: state.smurfs.filter(smurf => smurf.id !== action.payload.id)
+            }
+        case DELETE_SMURF_FAILED :
             return {
                 ...state,
                 error: action.payload

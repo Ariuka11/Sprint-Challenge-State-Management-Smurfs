@@ -4,9 +4,9 @@ const Smurf = (props) => {
     return (
         <div>
             <ul>
-            <li>{props.smurf.name}</li>
-            <li>{props.smurf.age}</li>
-            <li>{props.smurf.height}</li>
+            <li>Name: {props.smurf.name}</li>
+            <li>Age: {props.smurf.age}</li>
+            <li>Height: {props.smurf.height}</li>
             </ul>
         </div>
     )
